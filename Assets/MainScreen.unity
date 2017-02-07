@@ -1625,6 +1625,7 @@ MonoBehaviour:
   ball: {fileID: 130267230}
   redx1: {fileID: 0}
   redx2: {fileID: 0}
+  winbox: {fileID: 0}
 --- !u!4 &1131883620
 Transform:
   m_ObjectHideFlags: 0
