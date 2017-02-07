@@ -43,3 +43,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: flapsquare
+    uniqueID: 924961929
+    locked: 0
+  - name: flapcircles
+    uniqueID: 2125945963
+    locked: 0
