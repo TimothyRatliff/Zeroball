@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FailTrigger : MonoBehaviour {
+public class FailTrigger : MonoBehaviour
+{
     Vector2 initialPosition;
     public GameObject ball;
-    public int lives;
+    public static int lives;
     public GameObject ltext;
     public GameObject redx1;
     public GameObject redx2;
