@@ -23,11 +23,8 @@ public class FailTrigger : MonoBehaviour
             redx1 = GameObject.FindWithTag("redx");
         if (redx2 == null)
             redx2 = GameObject.FindWithTag("redx2");
-        if (winbox == null)
-            winbox = GameObject.FindWithTag("winbox");
         redx1.SetActive(false);
         redx2.SetActive(false);
-
         lives = 5;
     }
 
@@ -35,8 +32,6 @@ public class FailTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "ball")
         {
-            if (winbox.activeInHierarchy != true)
-            {
                 if (lives >= 0)
                 {
                     Debug.Log("Reset ball position to start");
@@ -48,7 +43,6 @@ public class FailTrigger : MonoBehaviour
                     redx1.SetActive(true);
                     redx2.SetActive(true);
                 }
-            }
         }
     }
     void Update ()
