@@ -11,6 +11,7 @@ TagManager:
   - lives
   - redx
   - redx2
+  - score
   layers:
   - Default
   - TransparentFX
