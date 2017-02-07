@@ -15,7 +15,7 @@ public class enemy1 : MonoBehaviour
         if (ball == null)
             ball = GameObject.FindWithTag("ball");
         if (enemy0 == null)
-            enemy0 = GameObject.FindWithTag("enemy2");
+            enemy0 = GameObject.FindWithTag("enemy0");
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
         initialPosition = gameObject.transform.position;
     }

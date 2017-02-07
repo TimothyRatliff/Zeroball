@@ -12,6 +12,9 @@ TagManager:
   - redx
   - redx2
   - score
+  - enemy2
+  - enemy1
+  - enemy0
   layers:
   - Default
   - TransparentFX
