@@ -15,7 +15,7 @@ public class FailTrigger : MonoBehaviour {
         initialPosition = ball.transform.position;
 
         if (ltext == null)
-            ltext = GameObject.FindWithTag("ltext");
+            ltext = GameObject.FindWithTag("lives");
         lives = 5;
     }
 
@@ -28,9 +28,14 @@ public class FailTrigger : MonoBehaviour {
             lives--;
         }
     }
-    void lateupdate ()
+    void Update ()
     {
         ltext.GetComponent<TextMesh>().text = "Lives: " + lives;
         Debug.Log("display -1 life");
+        if (lives == 0)
+        {
+            ltext.GetComponent<TextMesh>().text = "You lose! Try again next time.";
+            Debug.Log("display you lost message");
+        }
     }
 }

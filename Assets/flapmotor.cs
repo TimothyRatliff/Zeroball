@@ -29,7 +29,7 @@ public class flapmotor : MonoBehaviour {
         //}
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            jointMotor.motorSpeed = -1000;
+            jointMotor.motorSpeed = -500;
             hingeJoints[0].motor = jointMotor;
         }
         else

@@ -24,7 +24,7 @@ public class rflapmotor : MonoBehaviour {
     {
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            jointMotor.motorSpeed = 1000;
+            jointMotor.motorSpeed = 500;
             hingeJoints[0].motor = jointMotor;
         }
         //if (Input.GetKey(KeyCode.LeftArrow))

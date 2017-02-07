@@ -8,6 +8,7 @@ TagManager:
   - hammer
   - lflap
   - rflap
+  - lives
   layers:
   - Default
   - TransparentFX
@@ -42,6 +43,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: gameborder
+    uniqueID: 3137109477
+    locked: 0
   - name: gate
     uniqueID: 1046944915
     locked: 0
