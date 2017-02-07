@@ -6,6 +6,8 @@ TagManager:
   tags:
   - ball
   - hammer
+  - lflap
+  - rflap
   layers:
   - Default
   - TransparentFX
