@@ -16,6 +16,8 @@ TagManager:
   - enemy1
   - enemy0
   - winbox
+  - check1
+  - check2
   layers:
   - Default
   - TransparentFX

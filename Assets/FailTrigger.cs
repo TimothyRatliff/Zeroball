@@ -51,7 +51,7 @@ public class FailTrigger : MonoBehaviour
         Debug.Log("display life");
         if (lives < 0)
         {
-            ltext.GetComponent<TextMesh>().text = "You lose! Try again next time.";
+            ltext.GetComponent<TextMesh>().text = "You lose! \nRIP";
             Debug.Log("display you lost message");
         }
     }
