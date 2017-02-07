@@ -8,11 +8,14 @@ public class enemy1 : MonoBehaviour
     Vector2 currentPosition;
     Vector2 initialPosition;
     public GameObject ball;
+    public GameObject enemy0;
 
     void Start()
     {
         if (ball == null)
             ball = GameObject.FindWithTag("ball");
+        if (enemy0 == null)
+            enemy0 = GameObject.FindWithTag("enemy2");
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
         initialPosition = gameObject.transform.position;
     }
@@ -21,6 +24,7 @@ public class enemy1 : MonoBehaviour
     {
         if (other.gameObject.tag == "ball")
         {
+            enemy0.SetActive(true);
             gameObject.SetActive(false);
         }
     }
