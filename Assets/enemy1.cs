@@ -8,16 +8,13 @@ public class enemy1 : MonoBehaviour
     Vector2 currentPosition;
     Vector2 initialPosition;
     public GameObject ball;
-    public static int score;
 
     void Start()
     {
         if (ball == null)
             ball = GameObject.FindWithTag("ball");
-
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
         initialPosition = gameObject.transform.position;
-        score = 3;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -25,7 +22,6 @@ public class enemy1 : MonoBehaviour
         if (other.gameObject.tag == "ball")
         {
             gameObject.SetActive(false);
-            score--;
         }
     }
     void Update()

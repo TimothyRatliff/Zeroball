@@ -7,7 +7,7 @@ public class FailTrigger : MonoBehaviour
     Vector2 initialPosition;
     public GameObject ball;
     public static int lives;
-    public GameObject ltext;
+    public static GameObject ltext;
     public GameObject redx1;
     public GameObject redx2;
 
@@ -48,7 +48,7 @@ public class FailTrigger : MonoBehaviour
     void Update ()
     {
         ltext.GetComponent<TextMesh>().text = "Lives: " + lives;
-        Debug.Log("display -1 life");
+        Debug.Log("display life");
         if (lives < 0)
         {
             ltext.GetComponent<TextMesh>().text = "You lose! Try again next time.";
