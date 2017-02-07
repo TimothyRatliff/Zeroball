@@ -18,7 +18,7 @@ public class FailTrigger : MonoBehaviour {
     {
         if (other.gameObject.tag == "ball")
         {
-            Debug.Log("Reset ball posiion to start");
+            Debug.Log("Reset ball position to start");
             other.transform.position = initialPosition;
             //other.transform.rotation = Vecotr3(0, 0, 0);
         }

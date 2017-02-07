@@ -2,28 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(BoxCollider2D))]
+
 public class hammerpull : MonoBehaviour
 {
-    public GameObject hammer;
-    Vector2 position;
-    Vector2 newposition;
-    float time;
+    private Vector3 screenPoint;
+    private Vector3 offset;
 
-	void Start ()
+    void OnMouseDown()
     {
-        if (hammer == null)
-            hammer = GameObject.FindWithTag("hammer");
-        position = hammer.transform.position;
-        newposition = position;
+
+        offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
     }
-	
-	void Update ()
+
+    void OnMouseDrag()
     {
-        while (Input.GetKey(KeyCode.DownArrow))
-        {
-            time += Time.deltaTime;
-        }
-        newposition.y = position.y - time;
-        hammer.transform.position = newposition;
+        Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
+        Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
+        transform.position = curPosition;
     }
 }
