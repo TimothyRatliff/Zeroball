@@ -7,11 +7,14 @@ public class enemy0 : MonoBehaviour {
     Vector2 currentPosition;
     Vector2 initialPosition;
     public GameObject ball;
+    public GameObject winbox;
 
     void Start()
     {
         if (ball == null)
             ball = GameObject.FindWithTag("ball");
+        if (winbox == null)
+            winbox = GameObject.FindWithTag("winbox");
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
         initialPosition = gameObject.transform.position;
     }
@@ -20,6 +23,7 @@ public class enemy0 : MonoBehaviour {
     {
         if (other.gameObject.tag == "ball")
         {
+            winbox.SetActive(true);
             gameObject.SetActive(false);
         }
     }
