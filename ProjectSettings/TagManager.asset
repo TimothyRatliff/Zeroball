@@ -9,6 +9,8 @@ TagManager:
   - lflap
   - rflap
   - lives
+  - redx
+  - redx2
   layers:
   - Default
   - TransparentFX

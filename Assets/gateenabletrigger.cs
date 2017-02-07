@@ -6,7 +6,6 @@ public class gateenabletrigger : MonoBehaviour
 {
     public GameObject ball;
     public GameObject gate;
-
     void Start ()
     {
         if (ball == null)
