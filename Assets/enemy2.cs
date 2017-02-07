@@ -25,6 +25,7 @@ public class enemy2 : MonoBehaviour {
         initialPosition = gameObject.transform.position;
         enemy1.SetActive(false);
         enemy0.SetActive(false);
+        winbox.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

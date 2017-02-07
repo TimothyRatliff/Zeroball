@@ -26,12 +26,13 @@ public class scoretracker : MonoBehaviour
             score = 1;
         else if (enemy0.activeInHierarchy == true)
             score = 0;
-        else if(winbox.activeInHierarchy == true)
-        {
-            stext.GetComponent<TextMesh>().text = "You win! Congrats m8! gg ez";
-            Debug.Log("display you won message");
-        }
         stext.GetComponent<TextMesh>().text = "Score: " + score;
         Debug.Log("display score");
+
+        if (winbox.activeInHierarchy == true)
+        {
+            stext.GetComponent<TextMesh>().text = "You win! \nCongrats m8! \ngg ez";
+            Debug.Log("display you won message");
+        }
     }
 }
