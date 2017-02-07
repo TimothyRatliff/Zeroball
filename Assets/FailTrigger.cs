@@ -5,13 +5,18 @@ using UnityEngine;
 public class FailTrigger : MonoBehaviour {
     Vector2 initialPosition;
     public GameObject ball;
+    public int lives;
+    public GameObject ltext;
 
     void Start ()
     {
-        //position = new Vector2(4.604, -3.959);
         if (ball == null)
             ball = GameObject.FindWithTag("ball");
         initialPosition = ball.transform.position;
+
+        if (ltext == null)
+            ltext = GameObject.FindWithTag("ltext");
+        lives = 5;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -20,7 +25,12 @@ public class FailTrigger : MonoBehaviour {
         {
             Debug.Log("Reset ball position to start");
             other.transform.position = initialPosition;
-            //other.transform.rotation = Vecotr3(0, 0, 0);
+            lives--;
         }
+    }
+    void lateupdate ()
+    {
+        ltext.GetComponent<TextMesh>().text = "Lives: " + lives;
+        Debug.Log("display -1 life");
     }
 }
